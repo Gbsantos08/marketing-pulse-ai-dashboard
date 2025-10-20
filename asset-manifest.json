@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/marketing-pulse-ai-dashboard/static/js/main.b76a30df.js",
+    "static/js/453.d7446e4a.chunk.js": "/marketing-pulse-ai-dashboard/static/js/453.d7446e4a.chunk.js",
+    "index.html": "/marketing-pulse-ai-dashboard/index.html",
+    "main.b76a30df.js.map": "/marketing-pulse-ai-dashboard/static/js/main.b76a30df.js.map",
+    "453.d7446e4a.chunk.js.map": "/marketing-pulse-ai-dashboard/static/js/453.d7446e4a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.b76a30df.js"
+  ]
+}
