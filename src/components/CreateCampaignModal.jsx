@@ -1,8 +1,26 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { useDashboard } from '../contexts/DashboardContext';
 
 const CreateCampaignModal = ({ isOpen, onClose }) => {
   const { createCampaign } = useDashboard();
+=======
+import {
+  Box,
+  Button,
+  Input,
+  VStack,
+  HStack,
+  Textarea,
+  Text,
+  Select,
+} from '@chakra-ui/react';
+import { FaPlus, FaTimes } from 'react-icons/fa';
+import { useDashboard } from '../contexts/DashboardContext';
+
+const CreateCampaignModal = ({ isOpen, onClose }) => {
+  const { createCampaign, isLoading } = useDashboard();
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
   const [formData, setFormData] = useState({
     name: '',
     platform: '',
@@ -33,7 +51,11 @@ const CreateCampaignModal = ({ isOpen, onClose }) => {
       newErrors.platform = 'Plataforma é obrigatória';
     }
     
+<<<<<<< HEAD
     if (!formData.budget || formData.budget <= 0) {
+=======
+    if (!formData.budget || parseFloat(formData.budget) <= 0) {
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
       newErrors.budget = 'Orçamento deve ser maior que zero';
     }
 
@@ -68,6 +90,7 @@ const CreateCampaignModal = ({ isOpen, onClose }) => {
     }
   };
 
+<<<<<<< HEAD
   const modalStyles = {
     overlay: {
       position: 'fixed',
@@ -404,6 +427,267 @@ const CreateCampaignModal = ({ isOpen, onClose }) => {
         </div>
       </div>
     </div>
+=======
+  return (
+    <Box
+      position="fixed"
+      top={0}
+      left={0}
+      right={0}
+      bottom={0}
+      bg="blackAlpha.600"
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+      zIndex={1000}
+      onClick={onClose}
+    >
+      <Box
+        bg="bg.surface"
+        borderRadius="xl"
+        shadow="2xl"
+        maxW="lg"
+        w="full"
+        mx={4}
+        maxH="90vh"
+        overflow="auto"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Header */}
+        <Box
+          bg="blue.500"
+          color="white"
+          p={6}
+          borderTopRadius="xl"
+        >
+          <HStack justify="space-between" align="center">
+            <HStack spacing={3}>
+              <Text fontSize="2xl">🚀</Text>
+              <VStack align="start" spacing={0}>
+                <Text fontSize="xl" fontWeight="bold">
+                  Nova Campanha
+                </Text>
+                <Text fontSize="sm" opacity={0.9}>
+                  Crie uma campanha inteligente com IA
+                </Text>
+              </VStack>
+            </HStack>
+            <Button 
+              size="sm" 
+              variant="ghost" 
+              color="white"
+              _hover={{ bg: "whiteAlpha.200" }}
+              onClick={onClose}
+              borderRadius="full"
+            >
+              <FaTimes />
+            </Button>
+          </HStack>
+        </Box>
+        
+        {/* Body */}
+        <Box p={8}>
+          <VStack spacing={6} align="stretch">
+            {/* Nome da Campanha */}
+            <VStack align="start" spacing={2}>
+              <HStack spacing={2}>
+                <Text fontSize="sm" fontWeight="semibold" color="fg.default">
+                  Nome da Campanha
+                </Text>
+                <Text fontSize="sm" color="red.500">*</Text>
+              </HStack>
+              <Input
+                value={formData.name}
+                onChange={(e) => handleInputChange('name', e.target.value)}
+                placeholder="Ex: Campanha Black Friday 2024"
+                size="lg"
+                borderColor={errors.name ? "red.300" : "border.default"}
+                _focus={{ 
+                  borderColor: errors.name ? "red.300" : "blue.500",
+                  boxShadow: errors.name ? "0 0 0 1px red.300" : "0 0 0 1px blue.500"
+                }}
+              />
+              {errors.name && (
+                <Text color="red.500" fontSize="sm" mt={1}>
+                  {errors.name}
+                </Text>
+              )}
+            </VStack>
+
+            {/* Plataforma */}
+            <VStack align="start" spacing={2}>
+              <HStack spacing={2}>
+                <Text fontSize="sm" fontWeight="semibold" color="fg.default">
+                  Plataforma
+                </Text>
+                <Text fontSize="sm" color="red.500">*</Text>
+              </HStack>
+              <Select
+                value={formData.platform}
+                onChange={(e) => handleInputChange('platform', e.target.value)}
+                placeholder="Selecione a plataforma"
+                size="lg"
+                borderColor={errors.platform ? "red.300" : "border.default"}
+                _focus={{ 
+                  borderColor: errors.platform ? "red.300" : "blue.500",
+                  boxShadow: errors.platform ? "0 0 0 1px red.300" : "0 0 0 1px blue.500"
+                }}
+              >
+                <option value="Facebook">📘 Facebook</option>
+                <option value="Instagram">📷 Instagram</option>
+                <option value="Google Ads">🔍 Google Ads</option>
+                <option value="LinkedIn">💼 LinkedIn</option>
+                <option value="TikTok">🎵 TikTok</option>
+                <option value="YouTube">📺 YouTube</option>
+                <option value="Twitter">🐦 Twitter</option>
+              </Select>
+              {errors.platform && (
+                <Text color="red.500" fontSize="sm" mt={1}>
+                  {errors.platform}
+                </Text>
+              )}
+            </VStack>
+
+            {/* Orçamento */}
+            <VStack align="start" spacing={2}>
+              <HStack spacing={2}>
+                <Text fontSize="sm" fontWeight="semibold" color="fg.default">
+                  Orçamento (R$)
+                </Text>
+                <Text fontSize="sm" color="red.500">*</Text>
+              </HStack>
+              <Input
+                type="number"
+                value={formData.budget}
+                onChange={(e) => handleInputChange('budget', e.target.value)}
+                placeholder="5000"
+                size="lg"
+                borderColor={errors.budget ? "red.300" : "border.default"}
+                _focus={{ 
+                  borderColor: errors.budget ? "red.300" : "blue.500",
+                  boxShadow: errors.budget ? "0 0 0 1px red.300" : "0 0 0 1px blue.500"
+                }}
+              />
+              {errors.budget && (
+                <Text color="red.500" fontSize="sm" mt={1}>
+                  {errors.budget}
+                </Text>
+              )}
+              <Text fontSize="xs" color="fg.muted">
+                💡 Sugestão: Orçamentos entre R$ 1.000 - R$ 50.000 têm melhor performance
+              </Text>
+            </VStack>
+
+            {/* Público-Alvo */}
+            <VStack align="start" spacing={2}>
+              <Text fontSize="sm" fontWeight="semibold" color="fg.default">
+                Público-Alvo
+              </Text>
+              <Input
+                value={formData.targetAudience}
+                onChange={(e) => handleInputChange('targetAudience', e.target.value)}
+                placeholder="Ex: Mulheres 25-40 anos interessadas em moda"
+                size="lg"
+                borderColor="border.default"
+                _focus={{ 
+                  borderColor: "blue.500",
+                  boxShadow: "0 0 0 1px blue.500"
+                }}
+              />
+              <Text fontSize="xs" color="fg.muted">
+                🎯 Defina idade, gênero, interesses e localização
+              </Text>
+            </VStack>
+
+            {/* Descrição */}
+            <VStack align="start" spacing={2}>
+              <Text fontSize="sm" fontWeight="semibold" color="fg.default">
+                Descrição
+              </Text>
+              <Textarea
+                value={formData.description}
+                onChange={(e) => handleInputChange('description', e.target.value)}
+                placeholder="Descreva os objetivos da campanha, produtos/serviços, mensagem principal..."
+                rows={4}
+                resize="vertical"
+                borderColor="border.default"
+                _focus={{ 
+                  borderColor: "blue.500",
+                  boxShadow: "0 0 0 1px blue.500"
+                }}
+              />
+              <Text fontSize="xs" color="fg.muted">
+                📝 Seja específico sobre objetivos e estratégia
+              </Text>
+            </VStack>
+
+            {/* Preview de Estimativas */}
+            {formData.budget && formData.platform && (
+              <Box
+                bg="blue.50"
+                border="1px"
+                borderColor="blue.200"
+                borderRadius="lg"
+                p={4}
+              >
+                <Text fontSize="sm" fontWeight="semibold" color="blue.800" mb={2}>
+                  📊 Estimativas da IA
+                </Text>
+                <VStack spacing={1} align="start">
+                  <HStack justify="space-between" w="full">
+                    <Text fontSize="xs" color="blue.700">Alcance estimado:</Text>
+                    <Text fontSize="xs" fontWeight="medium" color="blue.800">
+                      {(parseFloat(formData.budget) * 15).toLocaleString()} pessoas
+                    </Text>
+                  </HStack>
+                  <HStack justify="space-between" w="full">
+                    <Text fontSize="xs" color="blue.700">Cliques esperados:</Text>
+                    <Text fontSize="xs" fontWeight="medium" color="blue.800">
+                      {Math.round(parseFloat(formData.budget) * 0.8)} cliques
+                    </Text>
+                  </HStack>
+                  <HStack justify="space-between" w="full">
+                    <Text fontSize="xs" color="blue.700">ROI projetado:</Text>
+                    <Text fontSize="xs" fontWeight="medium" color="green.600">
+                      +{Math.round(150 + Math.random() * 100)}%
+                    </Text>
+                  </HStack>
+                </VStack>
+              </Box>
+            )}
+
+            {/* Botões */}
+            <HStack spacing={4} pt={4}>
+              <Button 
+                variant="outline" 
+                onClick={onClose} 
+                flex={1}
+                size="lg"
+                borderColor="border.default"
+                _hover={{ bg: "gray.50" }}
+              >
+                Cancelar
+              </Button>
+              <Button
+                bg="blue.500"
+                color="white"
+                _hover={{ bg: "blue.600" }}
+                _active={{ bg: "blue.700" }}
+                onClick={handleSubmit}
+                isLoading={isSubmitting || isLoading}
+                loadingText="Criando..."
+                flex={1}
+                size="lg"
+                leftIcon={<FaPlus />}
+              >
+                Criar Campanha
+              </Button>
+            </HStack>
+          </VStack>
+        </Box>
+      </Box>
+    </Box>
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
   );
 };
 

@@ -35,10 +35,17 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
           color: 'blue',
           content: (
             <VStack spacing={6} align="stretch">
+<<<<<<< HEAD
               <SimpleGrid columns={2} gap={4}>
                 <Box bg="blue.50" p={4} borderRadius="lg">
                   <HStack spacing={2} mb={2}>
                     <FaEye color="var(--chakra-colors-blue-500)" />
+=======
+              <SimpleGrid columns={{ base: 1, md: 2 }} gap={4}>
+                <Box bg="blue.50" p={4} borderRadius="lg">
+                  <HStack spacing={2} mb={2}>
+                    <FaEye color="blue.500" />
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                     <Text fontSize="sm" fontWeight="medium" color="blue.700">
                       Impressões Totais
                     </Text>
@@ -47,6 +54,7 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
                     2.4M
                   </Text>
                   <HStack spacing={1} mt={1}>
+<<<<<<< HEAD
                     <FaArrowUp size={12} color="green" />
                     <Text fontSize="sm" color="green.600">+12.5%</Text>
                   </HStack>
@@ -55,6 +63,15 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
                 <Box bg="green.50" p={4} borderRadius="lg">
                   <HStack spacing={2} mb={2}>
                     <FaMousePointer color="var(--chakra-colors-green-500)" />
+=======
+                    <FaArrowUp size={12} color="green.500" />
+                    <Text fontSize="sm" color="green.600">+12.5%</Text>
+                  </HStack>
+                </Box>
+                <Box bg="green.50" p={4} borderRadius="lg">
+                  <HStack spacing={2} mb={2}>
+                    <FaMousePointer color="green.500" />
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                     <Text fontSize="sm" fontWeight="medium" color="green.700">
                       Taxa de Cliques
                     </Text>
@@ -63,6 +80,7 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
                     4.2%
                   </Text>
                   <HStack spacing={1} mt={1}>
+<<<<<<< HEAD
                     <FaArrowUp size={12} color="green" />
                     <Text fontSize="sm" color="green.600">+0.8%</Text>
                   </HStack>
@@ -71,6 +89,15 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
                 <Box bg="purple.50" p={4} borderRadius="lg">
                   <HStack spacing={2} mb={2}>
                     <FaHeart color="var(--chakra-colors-purple-500)" />
+=======
+                    <FaArrowUp size={12} color="green.500" />
+                    <Text fontSize="sm" color="green.600">+0.8%</Text>
+                  </HStack>
+                </Box>
+                <Box bg="purple.50" p={4} borderRadius="lg">
+                  <HStack spacing={2} mb={2}>
+                    <FaHeart color="purple.500" />
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                     <Text fontSize="sm" fontWeight="medium" color="purple.700">
                       Engajamento
                     </Text>
@@ -79,6 +106,7 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
                     8.7%
                   </Text>
                   <HStack spacing={1} mt={1}>
+<<<<<<< HEAD
                     <FaArrowUp size={12} color="green" />
                     <Text fontSize="sm" color="green.600">+2.1%</Text>
                   </HStack>
@@ -87,6 +115,15 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
                 <Box bg="orange.50" p={4} borderRadius="lg">
                   <HStack spacing={2} mb={2}>
                     <FaShare color="var(--chakra-colors-orange-500)" />
+=======
+                    <FaArrowUp size={12} color="green.500" />
+                    <Text fontSize="sm" color="green.600">+2.1%</Text>
+                  </HStack>
+                </Box>
+                <Box bg="orange.50" p={4} borderRadius="lg">
+                  <HStack spacing={2} mb={2}>
+                    <FaShare color="orange.500" />
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                     <Text fontSize="sm" fontWeight="medium" color="orange.700">
                       Compartilhamentos
                     </Text>
@@ -95,7 +132,11 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
                     1.2K
                   </Text>
                   <HStack spacing={1} mt={1}>
+<<<<<<< HEAD
                     <FaArrowDown size={12} color="red" />
+=======
+                    <FaArrowDown size={12} color="red.500" />
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                     <Text fontSize="sm" color="red.600">-3.2%</Text>
                   </HStack>
                 </Box>
@@ -104,7 +145,11 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
               <Separator />
 
               <VStack align="start" spacing={3}>
+<<<<<<< HEAD
                 <Text fontSize="lg" fontWeight="bold" color="gray.800">
+=======
+                <Text fontSize="lg" fontWeight="bold" color="fg.default">
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                   🎯 Insights em Tempo Real
                 </Text>
                 
@@ -116,7 +161,10 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
                     Sua campanha está 23% acima da média do setor
                   </Text>
                 </Box>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                 <Box p={3} bg="blue.50" borderRadius="lg" w="full">
                   <Text fontSize="sm" fontWeight="medium" color="blue.800">
                     📊 Tendência Positiva
@@ -138,7 +186,10 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
             </VStack>
           )
         };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
       case 'prediction':
         return {
           title: '🎯 Previsão de Alcance',
@@ -151,11 +202,16 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
                   Projeção para os próximos 7 dias
                 </Text>
                 <Text fontSize="4xl" fontWeight="bold" color="green.600">
+<<<<<<< HEAD
                   +187K
+=======
+                  +{data?.next7Days?.toLocaleString() || '187K'}
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                 </Text>
                 <Text fontSize="sm" color="green.700">
                   pessoas alcançadas
                 </Text>
+<<<<<<< HEAD
                 <Badge colorPalette="green" variant="subtle" mt={2}>
                   85% de confiança
                 </Badge>
@@ -164,10 +220,21 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
               <SimpleGrid columns={1} gap={4}>
                 <Box p={4} border="1px" borderColor="gray.200" borderRadius="lg">
                   <Text fontSize="sm" fontWeight="medium" color="gray.700" mb={3}>
+=======
+                <Badge colorScheme="green" variant="subtle" mt={2}>
+                  {data?.confidence || 85}% de confiança
+                </Badge>
+              </Box>
+
+              <SimpleGrid columns={{ base: 1, md: 1 }} gap={4}>
+                <Box p={4} border="1px" borderColor="border.default" borderRadius="lg">
+                  <Text fontSize="sm" fontWeight="medium" color="fg.default" mb={3}>
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                     📈 Breakdown da Previsão
                   </Text>
                   <VStack spacing={2} align="stretch">
                     <HStack justify="space-between">
+<<<<<<< HEAD
                       <Text fontSize="sm" color="gray.600">Alcance orgânico:</Text>
                       <Text fontSize="sm" fontWeight="medium">45K pessoas</Text>
                     </HStack>
@@ -182,6 +249,21 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
                   </VStack>
                 </Box>
 
+=======
+                      <Text fontSize="sm" color="fg.muted">Alcance orgânico:</Text>
+                      <Text fontSize="sm" fontWeight="medium" color="fg.default">45K pessoas</Text>
+                    </HStack>
+                    <HStack justify="space-between">
+                      <Text fontSize="sm" color="fg.muted">Alcance pago:</Text>
+                      <Text fontSize="sm" fontWeight="medium" color="fg.default">142K pessoas</Text>
+                    </HStack>
+                    <HStack justify="space-between">
+                      <Text fontSize="sm" color="fg.muted">Crescimento viral:</Text>
+                      <Text fontSize="sm" fontWeight="medium" color="fg.default">+12% estimado</Text>
+                    </HStack>
+                  </VStack>
+                </Box>
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                 <Box p={4} bg="blue.50" borderRadius="lg">
                   <Text fontSize="sm" fontWeight="medium" color="blue.800" mb={2}>
                     🤖 Recomendações da IA
@@ -202,7 +284,10 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
             </VStack>
           )
         };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
       case 'roi':
         return {
           title: '💰 ROI Otimizado',
@@ -212,27 +297,47 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
             <VStack spacing={6} align="stretch">
               <HStack spacing={8} justify="center">
                 <VStack>
+<<<<<<< HEAD
                   <Text fontSize="sm" color="gray.600">ROI Atual</Text>
                   <Text fontSize="3xl" fontWeight="bold" color="orange.500">
                     250%
                   </Text>
                   <Badge colorPalette="orange" variant="subtle">Bom</Badge>
+=======
+                  <Text fontSize="sm" color="fg.muted">ROI Atual</Text>
+                  <Text fontSize="3xl" fontWeight="bold" color="orange.500">
+                    {data?.currentROI || 250}%
+                  </Text>
+                  <Badge colorScheme="orange" variant="subtle">Bom</Badge>
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                 </VStack>
                 
                 <Text fontSize="3xl" color="gray.400">→</Text>
                 
                 <VStack>
+<<<<<<< HEAD
                   <Text fontSize="sm" color="gray.600">ROI Otimizado</Text>
                   <Text fontSize="3xl" fontWeight="bold" color="green.500">
                     355%
                   </Text>
                   <Badge colorPalette="green" variant="subtle">Excelente</Badge>
+=======
+                  <Text fontSize="sm" color="fg.muted">ROI Otimizado</Text>
+                  <Text fontSize="3xl" fontWeight="bold" color="green.500">
+                    {data?.optimizedROI || 355}%
+                  </Text>
+                  <Badge colorScheme="green" variant="subtle">Excelente</Badge>
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                 </VStack>
               </HStack>
 
               <Box p={4} bg="green.50" borderRadius="lg" textAlign="center">
                 <Text fontSize="lg" fontWeight="bold" color="green.800">
+<<<<<<< HEAD
                   +42% de Potencial de Melhoria
+=======
+                  +{data?.improvement || 42}% de Potencial de Melhoria
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                 </Text>
                 <Text fontSize="sm" color="green.700" mt={1}>
                   Implementando as sugestões da IA
@@ -240,7 +345,11 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
               </Box>
 
               <VStack spacing={4} align="stretch">
+<<<<<<< HEAD
                 <Text fontSize="lg" fontWeight="bold" color="gray.800">
+=======
+                <Text fontSize="lg" fontWeight="bold" color="fg.default">
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                   🎯 Estratégias de Otimização
                 </Text>
 
@@ -251,11 +360,18 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
                   <Text fontSize="sm" color="blue.700" mb={2}>
                     Mover 30% do orçamento para Instagram (melhor performance)
                   </Text>
+<<<<<<< HEAD
                   <Badge colorPalette="blue" variant="subtle" size="sm">
                     +15% ROI esperado
                   </Badge>
                 </Box>
 
+=======
+                  <Badge colorScheme="blue" variant="subtle" size="sm">
+                    +15% ROI esperado
+                  </Badge>
+                </Box>
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                 <Box p={4} border="1px" borderColor="purple.200" borderRadius="lg">
                   <Text fontSize="sm" fontWeight="medium" color="purple.800" mb={2}>
                     2. Otimização de Público
@@ -263,11 +379,18 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
                   <Text fontSize="sm" color="purple.700" mb={2}>
                     Focar em mulheres 25-35 anos (maior taxa de conversão)
                   </Text>
+<<<<<<< HEAD
                   <Badge colorPalette="purple" variant="subtle" size="sm">
                     +18% ROI esperado
                   </Badge>
                 </Box>
 
+=======
+                  <Badge colorScheme="purple" variant="subtle" size="sm">
+                    +18% ROI esperado
+                  </Badge>
+                </Box>
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                 <Box p={4} border="1px" borderColor="green.200" borderRadius="lg">
                   <Text fontSize="sm" fontWeight="medium" color="green.800" mb={2}>
                     3. Ajuste de Horários
@@ -275,7 +398,11 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
                   <Text fontSize="sm" color="green.700" mb={2}>
                     Concentrar anúncios entre 19h-21h (pico de engajamento)
                   </Text>
+<<<<<<< HEAD
                   <Badge colorPalette="green" variant="subtle" size="sm">
+=======
+                  <Badge colorScheme="green" variant="subtle" size="sm">
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                     +9% ROI esperado
                   </Badge>
                 </Box>
@@ -283,7 +410,10 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
             </VStack>
           )
         };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
       case 'sentiment':
         return {
           title: '🧠 Análise de Sentimento IA',
@@ -295,6 +425,7 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
                 <Box bg="green.50" p={4} borderRadius="lg" textAlign="center">
                   <Text fontSize="3xl" mb={2}>😊</Text>
                   <Text fontSize="2xl" fontWeight="bold" color="green.600">
+<<<<<<< HEAD
                     68%
                   </Text>
                   <Text fontSize="sm" color="green.700">Positivo</Text>
@@ -304,6 +435,16 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
                   <Text fontSize="3xl" mb={2}>😐</Text>
                   <Text fontSize="2xl" fontWeight="bold" color="gray.600">
                     20%
+=======
+                    {data?.positive || 68}%
+                  </Text>
+                  <Text fontSize="sm" color="green.700">Positivo</Text>
+                </Box>
+                <Box bg="gray.50" p={4} borderRadius="lg" textAlign="center">
+                  <Text fontSize="3xl" mb={2}>😐</Text>
+                  <Text fontSize="2xl" fontWeight="bold" color="gray.600">
+                    {data?.neutral || 20}%
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                   </Text>
                   <Text fontSize="sm" color="gray.700">Neutro</Text>
                 </Box>
@@ -311,7 +452,11 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
                 <Box bg="red.50" p={4} borderRadius="lg" textAlign="center">
                   <Text fontSize="3xl" mb={2}>😞</Text>
                   <Text fontSize="2xl" fontWeight="bold" color="red.600">
+<<<<<<< HEAD
                     12%
+=======
+                    {data?.negative || 12}%
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                   </Text>
                   <Text fontSize="sm" color="red.700">Negativo</Text>
                 </Box>
@@ -324,6 +469,7 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
                 <VStack spacing={2} align="stretch">
                   <HStack justify="space-between">
                     <Text fontSize="sm" color="purple.700">Palavras positivas mais citadas:</Text>
+<<<<<<< HEAD
                     <Text fontSize="sm" fontWeight="medium">"incrível", "amei", "perfeito"</Text>
                   </HStack>
                   <HStack justify="space-between">
@@ -333,12 +479,27 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
                   <HStack justify="space-between">
                     <Text fontSize="sm" color="purple.700">Pontos de melhoria:</Text>
                     <Text fontSize="sm" fontWeight="medium">Entrega, embalagem</Text>
+=======
+                    <Text fontSize="sm" fontWeight="medium" color="purple.800">"incrível", "amei", "perfeito"</Text>
+                  </HStack>
+                  <HStack justify="space-between">
+                    <Text fontSize="sm" color="purple.700">Principais elogios:</Text>
+                    <Text fontSize="sm" fontWeight="medium" color="purple.800">Qualidade, atendimento, preço</Text>
+                  </HStack>
+                  <HStack justify="space-between">
+                    <Text fontSize="sm" color="purple.700">Pontos de melhoria:</Text>
+                    <Text fontSize="sm" fontWeight="medium" color="purple.800">Entrega, embalagem</Text>
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                   </HStack>
                 </VStack>
               </Box>
 
               <VStack spacing={3} align="stretch">
+<<<<<<< HEAD
                 <Text fontSize="lg" fontWeight="bold" color="gray.800">
+=======
+                <Text fontSize="lg" fontWeight="bold" color="fg.default">
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                   💡 Insights e Recomendações
                 </Text>
 
@@ -350,7 +511,10 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
                     68% de comentários positivos está acima da média do setor (55%)
                   </Text>
                 </Box>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
                 <Box p={3} bg="blue.50" borderRadius="lg">
                   <Text fontSize="sm" fontWeight="medium" color="blue.800">
                     🎯 Oportunidade
@@ -372,13 +536,20 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
             </VStack>
           )
         };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
       default:
         return {
           title: 'Detalhes',
           icon: FaChartLine,
           color: 'blue',
+<<<<<<< HEAD
           content: <Text>Conteúdo não encontrado</Text>
+=======
+          content: <Text color="fg.default">Conteúdo não encontrado</Text>
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
         };
     }
   };
@@ -400,7 +571,11 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
       onClick={onClose}
     >
       <Box
+<<<<<<< HEAD
         bg="white"
+=======
+        bg="bg.surface"
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
         borderRadius="xl"
         shadow="2xl"
         maxW="2xl"
@@ -415,6 +590,10 @@ const AnalyticsDetailModal = ({ isOpen, onClose, type, data }) => {
           bgGradient={`linear(to-r, ${modalContent.color}.500, ${modalContent.color}.600)`}
           color="white"
           p={6}
+<<<<<<< HEAD
+=======
+          borderTopRadius="xl"
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
         >
           <HStack justify="space-between" align="center">
             <HStack spacing={3}>

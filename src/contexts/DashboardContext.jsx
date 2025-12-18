@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import ApiService from '../services/api';
 
@@ -13,12 +14,22 @@ export const useDashboard = () => {
 
 export const DashboardProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
+=======
+import React, { createContext, useContext, useState, useEffect } from "react";
+
+// Contexto
+const DashboardContext = createContext();
+
+export const DashboardProvider = ({ children }) => {
+  const [isLoading, setIsLoading] = useState(false);
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
   const [campaigns, setCampaigns] = useState([]);
   const [analytics, setAnalytics] = useState(null);
   const [metrics, setMetrics] = useState({
     totalCampaigns: 0,
     activeCampaigns: 0,
     totalReach: 0,
+<<<<<<< HEAD
     engagement: 0,
     roi: 0,
     campaignGrowth: 0,
@@ -27,11 +38,18 @@ export const DashboardProvider = ({ children }) => {
     totalSpent: 0,
     totalBudget: 0,
     budgetUtilization: 0
+=======
+    roi: 0,
+    campaignGrowth: 0,
+    reachGrowth: 0,
+    engagementGrowth: 0
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
   });
   const [notifications, setNotifications] = useState([]);
   const [lastUpdate, setLastUpdate] = useState(new Date());
   const [selectedCampaign, setSelectedCampaign] = useState(null);
 
+<<<<<<< HEAD
   // Remover notificação
   const removeNotification = useCallback((notificationId) => {
     setNotifications(prev => prev.filter(n => n.id !== notificationId));
@@ -377,9 +395,149 @@ Relatório gerado em: ${new Date().toLocaleString()}
 
   return (
     <DashboardContext.Provider value={value}>
+=======
+  // Simula carregar dados
+  const loadDashboardData = async () => {
+    setIsLoading(true);
+    try {
+      // Simulação de API
+      await new Promise((res) => setTimeout(res, 1000));
+
+      // Campanhas fake
+      const fakeCampaigns = [
+        {
+          id: 1,
+          name: "Campanha Alpha",
+          platform: "Instagram",
+          daysAgo: 5,
+          status: "Ativa",
+          progress: 70,
+          roi: "250%",
+          reach: "12.345",
+          engagement: "2.345",
+          ctr: 4.5,
+          conversions: 150,
+          costPerClick: 0.35,
+          spent: 5000,
+          performance: [
+            { date: "2025-10-10", value: 100 },
+            { date: "2025-10-11", value: 150 },
+            { date: "2025-10-12", value: 120 }
+          ]
+        },
+        {
+          id: 2,
+          name: "Campanha Beta",
+          platform: "Facebook",
+          daysAgo: 3,
+          status: "Pausada",
+          progress: 40,
+          roi: "180%",
+          reach: "8.123",
+          engagement: "1.234",
+          ctr: 3.2,
+          conversions: 80,
+          costPerClick: 0.50,
+          spent: 3000,
+          performance: [
+            { date: "2025-10-10", value: 80 },
+            { date: "2025-10-11", value: 90 },
+            { date: "2025-10-12", value: 100 }
+          ]
+        }
+      ];
+
+      setCampaigns(fakeCampaigns);
+      setAnalytics({
+        platformDistribution: [
+          { platform: "Instagram", value: 60 },
+          { platform: "Facebook", value: 40 }
+        ],
+        reachPrediction: { next7Days: 187000, confidence: 85 },
+        roiOptimization: { currentROI: 250, optimizedROI: 355, improvement: 42 },
+        sentimentAnalysis: [
+          { sentiment: "Positive", value: 70 },
+          { sentiment: "Neutral", value: 20 },
+          { sentiment: "Negative", value: 10 }
+        ]
+      });
+
+      setMetrics({
+        totalCampaigns: fakeCampaigns.length,
+        activeCampaigns: fakeCampaigns.filter(c => c.status === "Ativa").length,
+        totalReach: 200000,
+        roi: 250,
+        campaignGrowth: 5,
+        reachGrowth: 8,
+        engagementGrowth: 10
+      });
+
+      setNotifications([
+        { id: 1, type: "success", title: "Campanha criada!", message: "Sua campanha Alpha foi criada com sucesso." },
+        { id: 2, type: "info", title: "Atualização de métricas", message: "As métricas foram atualizadas recentemente." }
+      ]);
+
+      setLastUpdate(new Date());
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const toggleCampaignStatus = (id) => {
+    setCampaigns(prev =>
+      prev.map(c => c.id === id ? { ...c, status: c.status === "Ativa" ? "Pausada" : "Ativa" } : c)
+    );
+  };
+
+  const deleteCampaign = (id) => {
+    setCampaigns(prev => prev.filter(c => c.id !== id));
+    setNotifications(prev => [...prev, { id: Date.now(), type: "error", title: "Campanha excluída", message: "Uma campanha foi removida." }]);
+  };
+
+  const removeNotification = (id) => {
+    setNotifications(prev => prev.filter(n => n.id !== id));
+  };
+
+  const selectCampaign = (id) => {
+    const campaign = campaigns.find(c => c.id === id);
+    setSelectedCampaign(campaign || null);
+  };
+
+  const getCampaignAnalytics = async (id) => {
+    const campaign = campaigns.find(c => c.id === id);
+    return campaign?.performance || [];
+  };
+
+  useEffect(() => {
+    loadDashboardData();
+  }, []);
+
+  return (
+    <DashboardContext.Provider value={{
+      isLoading,
+      campaigns,
+      analytics,
+      metrics,
+      notifications,
+      lastUpdate,
+      loadDashboardData,
+      toggleCampaignStatus,
+      deleteCampaign,
+      removeNotification,
+      selectCampaign,
+      selectedCampaign,
+      getCampaignAnalytics
+    }}>
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
       {children}
     </DashboardContext.Provider>
   );
 };
 
+<<<<<<< HEAD
 export default DashboardProvider;
+=======
+export const useDashboard = () => useContext(DashboardContext);
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26

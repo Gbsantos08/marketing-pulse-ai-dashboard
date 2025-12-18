@@ -28,7 +28,11 @@ const PerformanceChart = ({ data, title = "Performance da Campanha" }) => {
   if (!data || !data.daily || data.daily.length === 0) {
     return (
       <Box textAlign="center" py={8}>
+<<<<<<< HEAD
         <Text color="gray.500">Dados insuficientes para gerar gráfico</Text>
+=======
+        <Text color="fg.muted">Dados insuficientes para gerar gráfico</Text>
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
       </Box>
     );
   }
@@ -93,7 +97,12 @@ const PerformanceChart = ({ data, title = "Performance da Campanha" }) => {
           font: {
             size: 12,
             weight: '500'
+<<<<<<< HEAD
           }
+=======
+          },
+          color: '#6B7280'
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
         }
       },
       title: {
@@ -103,15 +112,27 @@ const PerformanceChart = ({ data, title = "Performance da Campanha" }) => {
           size: 16,
           weight: 'bold'
         },
+<<<<<<< HEAD
         padding: 20
+=======
+        padding: 20,
+        color: '#374151'
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
       },
       tooltip: {
         mode: 'index',
         intersect: false,
+<<<<<<< HEAD
         backgroundColor: 'rgba(0, 0, 0, 0.8)',
         titleColor: '#fff',
         bodyColor: '#fff',
         borderColor: 'rgba(255, 255, 255, 0.1)',
+=======
+        backgroundColor: '#ffffff',
+        titleColor: '#374151',
+        bodyColor: '#6B7280',
+        borderColor: '#E5E7EB',
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
         borderWidth: 1,
         cornerRadius: 8,
         padding: 12
@@ -126,7 +147,12 @@ const PerformanceChart = ({ data, title = "Performance da Campanha" }) => {
         ticks: {
           font: {
             size: 11
+<<<<<<< HEAD
           }
+=======
+          },
+          color: '#6B7280'
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
         }
       },
       y: {
@@ -137,7 +163,12 @@ const PerformanceChart = ({ data, title = "Performance da Campanha" }) => {
         ticks: {
           font: {
             size: 11
+<<<<<<< HEAD
           }
+=======
+          },
+          color: '#6B7280'
+>>>>>>> 9d9de9e1518e4dca0e037fb6c0b9e247f2675d26
         }
       }
     },
