@@ -1,0 +1,109 @@
+/* Reset e base */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* Tema Claro (padrão) */
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+/* Tema Escuro */
+[data-theme="dark"] {
+  --bg-primary: #0f172a; /* Fundo principal escuro */
+  --bg-secondary: #1e293b; /* Fundo de cards/superfícies escuro */
+  --bg-tertiary: #334155; /* Fundo de elementos mais escuros (inputs, progress track) */
+  --text-primary: #f1f5f9; /* Texto principal claro */
+  --text-secondary: #cbd5e1; /* Texto secundário claro */
+  --text-muted: #94a3b8; /* Texto muted claro */
+  --border-color: #475569; /* Borda para tema escuro */
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3); /* Sombra mais escura */
+}
+
+/* Aplicar variáveis globalmente */
+body {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Cards e containers */
+.theme-card {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+  box-shadow: var(--shadow) !important;
+}
+
+.theme-surface {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Texto */
+.theme-text-primary {
+  color: var(--text-primary) !important;
+}
+
+.theme-text-secondary {
+  color: var(--text-secondary) !important;
+}
+
+.theme-text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Chakra UI overrides específicos */
+[data-theme="dark"] .chakra-box,
+[data-theme="dark"] .chakra-container {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .chakra-heading {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .chakra-text {
+  color: var(--text-secondary) !important;
+}
+
+/* Scrollbar personalizada */
+[data-theme="dark"] ::-webkit-scrollbar {
+  width: 8px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--border-color);
+}
+
+/* Inputs e forms no tema escuro */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Modais no tema escuro */
+[data-theme="dark"] .chakra-modal__content {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
