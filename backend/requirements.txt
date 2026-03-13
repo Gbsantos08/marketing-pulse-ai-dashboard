@@ -1,0 +1,10 @@
+fastapi[all]
+uvicorn
+sqlalchemy
+psycopg2-binary
+pandas
+numpy
+torch
+transformers # Para modelos de NLP pré-treinados com PyTorch (opcional, mas recomendado para "avançado")
+scipy # Pode ser útil para algumas operações estatísticas
+python-dotenv
