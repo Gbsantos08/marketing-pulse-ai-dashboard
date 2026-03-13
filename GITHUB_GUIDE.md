@@ -38,11 +38,27 @@ git remote add origin https://github.com/[YOUR_USERNAME]/marketing-pulse-ai-dash
 # Definir o branch principal
 git branch -M main
 
-# Push the code
-# Enviar o código
+## Handling "Rejected" Error / Resolvendo Erro de "Rejected"
+If you get an error saying "updates were rejected because the remote contains work that you do not have locally", it means GitHub created a file (like a README) that is not on your computer.
+Se você receber um erro dizendo "updates were rejected because the remote contains work that you do not have locally", significa que o GitHub criou um arquivo (como um README) que não está no seu computador.
+
+Run these commands to fix it:
+Execute estes comandos para corrigir:
+
+```bash
+# Pull remote changes and allow merging unrelated histories
+# Puxar mudanças remotas e permitir mesclar históricos diferentes
+git pull origin main --allow-unrelated-histories
+
+# Now push again
+# Agora envie novamente
 git push -u origin main
 ```
 
-## Security Note / Nota de Segurança
+Alternatively (if you don't care about what is on GitHub already):
+Alternativamente (se você não se importa com o que já está no GitHub):
+```bash
+git push -u origin main --force
+```
 Your API keys and virtual environments are protected by the .gitignore file and will not be uploaded. Only your code, setup instructions, and bilingual documentation will be public.
 Suas chaves de API e ambientes virtuais estão protegidos pelo arquivo .gitignore e não serão enviados. Apenas seu código, instruções de configuração e documentação bilingue ficarão públicos.
